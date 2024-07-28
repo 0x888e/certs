@@ -147,7 +147,7 @@ def download(args: argparse.Namespace) -> None:
         # couldn't detect the model.
         if not model:
             print(
-                "[-] Failed to detect model. Please specify the model with the --model flag."
+                "[-] Failed to detect model. Please specify the model with the --force-model flag."
             )
             exit(1)
 
