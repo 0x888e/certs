@@ -160,8 +160,6 @@ def download(args: argparse.Namespace) -> None:
 [+] ----------------------------------------"""
     )
 
-    # receive the hosts file in a loop
-
     path = "/mfg/mfg.dat" if model == Model.BGW210 else "/mfg/calibration_01.bin"
     exit_flag = Value(ctypes.c_bool, False)  # type: ignore
 
