@@ -52,7 +52,7 @@ Depending on your device manufacturer, there are two separate download paths. Yo
 It is best to use a physical machine to ensure the fastest possible operation. Virtual machines may require a few more reboots due to the timing nature of the method used by this script.
 
 1. Connect your machine directly to LAN1 on the BGW.
-2. Unplug any other SFP/ethernet cables plugged into the BGW (e.g., unplug the ONT port or remove the SFP adapter if fiber is supplied directly to the BGW).
+2. Unplug any other SFP/ethernet cables plugged into the BGW (e.g., unplug the ONT port or remove the SFP adapter if fiber is supplied directly to the BGW). **The ONLY cables plugged into the BGW should be the ethernet cable to your computer and the power cable**.
 3. Configure the NIC on your machine that is connected to LAN1 on the BGW with a static IP of 192.168.1.11, broadcast 255.255.255.0 and gateway 192.168.1.254. Ensure there are no other routes on to the 192.168.1/24 subnet available to your machine.
 
 ## STEP 3: Extraction
