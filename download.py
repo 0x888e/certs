@@ -156,7 +156,7 @@ def download(args: argparse.Namespace) -> None:
 [+] Firmware compatible. Configured model: {model.value}
 [+] ----------------------------------------
 [+] *** REBOOT THE {model.value} NOW ***
-[+] (This may take up to 3 minutes. After 3 minutes, keep this running and reboot the BGW with the red button on the back.)
+[+] (This may take up to 3 minutes. After 3 minutes, keep this running and reboot the BGW by TAPPING the red reset button on the back of the BGW. Do not hold this button down as it will factory reset.)
 [+] ----------------------------------------"""
     )
 
