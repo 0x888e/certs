@@ -78,4 +78,4 @@ You can upgrade your BGW to the latest firmware version when it is complete. The
 
 - BGW210-700: <http://gateway.c01.sbcglobal.net/firmware/GA/210/001E46/BGW210-700_4.28.6/spTurquoise210-700_4.28.6.bin>
 - BGW320-500 (Humax): <http://gateway.c01.sbcglobal.net/firmware/GA/320/0C08B4/BGW320-500_4.27.7/spTurquoise320-500_4.27.7_sec.bin>
-- BGW320-500 (Nokia): <http://gateway.c01.sbcglobal.net/firmware/GA/320/207852/BGW320-505_4.27.7/spTurquoise320-505_4.27.7_sec.bin>
+- BGW320-505 (Nokia): <http://gateway.c01.sbcglobal.net/firmware/GA/320/207852/BGW320-505_4.27.7/spTurquoise320-505_4.27.7_sec.bin>
