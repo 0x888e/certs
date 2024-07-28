@@ -16,7 +16,7 @@ This script practically solves the identical problem that <https://github.com/mo
 
 ## Requirements
 
-- A BGW320 or BGW210
+- A BGW320 or BGW210 with compatible firmware (see below).
 - A computer with a network interface card.
 - Python 3.12 or later.
 
@@ -76,6 +76,6 @@ Use the appropriate version of [mfg_dat_decode](https://www.devicelocksmith.com/
 
 You can upgrade your BGW to the latest firmware version when it is complete. These are latest as of July 28, 2024. Links to the latest images change often as firmware updates change but are not difficult to guess / find in online forums.
 
-BGW210-700: <http://gateway.c01.sbcglobal.net/firmware/GA/210/001E46/BGW210-700_4.28.6/spTurquoise210-700_4.28.6.bin>
-BGW320-500 (Humax): <http://gateway.c01.sbcglobal.net/firmware/GA/320/0C08B4/BGW320-500_4.27.7/spTurquoise320-500_4.27.7_sec.bin>
-BGW320-500 (Nokia): <http://gateway.c01.sbcglobal.net/firmware/GA/320/207852/BGW320-505_4.27.7/spTurquoise320-505_4.27.7_sec.bin>
+- BGW210-700: <http://gateway.c01.sbcglobal.net/firmware/GA/210/001E46/BGW210-700_4.28.6/spTurquoise210-700_4.28.6.bin>
+- BGW320-500 (Humax): <http://gateway.c01.sbcglobal.net/firmware/GA/320/0C08B4/BGW320-500_4.27.7/spTurquoise320-500_4.27.7_sec.bin>
+- BGW320-500 (Nokia): <http://gateway.c01.sbcglobal.net/firmware/GA/320/207852/BGW320-505_4.27.7/spTurquoise320-505_4.27.7_sec.bin>
