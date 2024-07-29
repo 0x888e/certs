@@ -32,20 +32,31 @@ To run the downloader, your BGW has to be on a compatible firmware. Version 3.18
 Apply the following firmware images. **It is important that these firmware images are installed in the order they are displayed below**
 
 1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_debug/spTurquoise210-700_2.14.2_NO_AT.bin>
-2. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.1/spTrapeze_Turquoise210-700_3.18.1.bin>
+   - SHA1: `e18115da88c3be8dd06806955f32e8b730407e8b`
+   - MD5: `da46862eab89212439507b6e1792b2d1`
+3. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.1/spTrapeze_Turquoise210-700_3.18.1.bin>
+   - SHA1: `c2cafb7fb81e68238be938aed0e302e3b6522ef8`
+   - MD5: `da1bd55bf48754823e75089baead74da`
 
 ### BGW320 downgrade path
 
 Depending on your device manufacturer, there are two separate download paths. You can determine your manufacturer by looking at the sticker on the back of the BGW320. **It is important that these firmware images are installed in the order they are displayed below**.
 
 - BGW320-500 (Humax)
-
   1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/0C08B4/BGW320-500_3.17.5_dnvpnP/spTurquoise320-500_3.17.5_dnvpnP_021_sec.bin>
-  2. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/0C08B4/BGW320-500_3.18.1/spTurquoise320-500_3.18.1_sec.bin>
+     - SHA1: `259e91b586f89f1e94eaa554a52fd9a2ea1cd026`
+     - MD5: `7882823e14bbeef187e2754f49323f4c`
+  3. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/0C08B4/BGW320-500_3.18.1/spTurquoise320-500_3.18.1_sec.bin>
+     - SHA1: `790bdc528696885871505e025d5c0328595d4447`
+     - MD5: `0d9f4b2a6139e92517884c26f5ed4f3b`
 
 - BGW320-505 (Nokia)
   1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/207852/BGW320-505_3.17.5_dnvpnP/spTurquoise320-505_3.17.5_dnvpnP_021_sec.bin>
-  2. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/207852/BGW320-505_3.18.1/spTurquoise320-505_3.18.1_sec.bin>
+     - SHA1: `0fd668617ff0a723379380a9f5d167f2a6015ef8`
+     - MD5: `d3d9bc9d76d5331659176ae4cfe744af`
+  3. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/207852/BGW320-505_3.18.1/spTurquoise320-505_3.18.1_sec.bin>
+     - SHA1: `2e81363a1cc0784c82e3f5305668c88b49e33561`
+     - MD5: `63d74cda47de1dde22303f1d99328803`
 
 ## STEP 2: Physical preparation
 
@@ -67,6 +78,11 @@ With your machine connected to LAN1 on the BGW and the BGW powered ON, perform t
 
 2. Let the script determine your BGW compatibility.
 3. Follow the instructions in the terminal from the script.
+
+For the BGW320, four files will be produced: calibraiton_01.bin, and three root CA der files.
+For the BGW210, five files will be produced: mfg.dat, calibration_01.bin, and three root CA der files.
+
+The BGW210 calibration_01.bin file is not needed and only produced for convenience. It represents the last 16kb chunk of the mfg.dat file containing the raw certificate data.
 
 ## STEP 4: Conversion to wpa_supplicant-compatible configuration files
 
