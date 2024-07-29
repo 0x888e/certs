@@ -13,7 +13,7 @@ This script practically solves the identical problem that <https://github.com/mo
 1. Support for the BGW320.
 2. Automatic BGW model detection.
 3. Updated documentation for a downgrade path for the 210.
-4. Faster, simpler operation. The extraction method (in both attcerts and this repo) utilizes a CVE in earlier firmware versions to obtain the raw certificate data from a partition that is only momentarily mounted on startup. Parallelized Python allows faster brute forcing to increase the probability of success. In most situations this script should retrieve the data in under 5 minutes with about 2-3 reboots.
+4. Faster, simpler operation. The extraction method (in both attcerts and this repo) utilizes a path traversal vulnerability in earlier firmware versions to obtain the raw certificate data from a partition that is only momentarily mounted on startup. Parallelized Python allows faster brute forcing to increase the probability of success. In most situations this script should retrieve the data in under 5 minutes with about 2-3 reboots.
 
 ## Requirements
 
