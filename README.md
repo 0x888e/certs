@@ -4,7 +4,7 @@ This repository exists to retrieve and convert calibration data from BGW routers
 
 > [!CAUTION]
 > This method requires downgrading firmware to earlier versions. That may result in configuration incompatibilities, which can result in the loss of various settings on the BGW.
-> Though it _should_ remain be usable for internet access, this has not been tested. **Use at your own risk**.
+> Though it _should_ remain be usable for internet access, this has not been tested. It is not recommended to use this approach on a BGW provisioned for service. **Use at your own risk**.
 
 ## How is this different from mozzarellathicc/attcerts?
 
