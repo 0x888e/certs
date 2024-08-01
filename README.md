@@ -36,9 +36,9 @@ If the BGW210 has firmware version 4.28.6 or later:
   1. Install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin>
 
 > [!WARNING]
-> There is at least one report of the inability to change firmware versions after flashing version 3.18.1 (listed below) on the BGW-210
+> There is at least one report of the inability to change firmware versions after flashing version 3.18.1 (listed below) on the BGW210
 
-Alternate downgrade path:
+Alternate downgrade path (only use if the previous firmware could not be applied):
    1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_debug/spTurquoise210-700_2.14.2_NO_AT.bin>
       - SHA1: `e18115da88c3be8dd06806955f32e8b730407e8b`
       - MD5: `da46862eab89212439507b6e1792b2d1`
