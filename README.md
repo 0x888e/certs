@@ -32,15 +32,19 @@ To run the downloader, your BGW has to be on a compatible firmware. Version 3.18
 
 Apply the following firmware images. **It is important that these firmware images are installed in the order they are displayed below**
 
-> [!WARNING]
-> There is at least one report of the inability to change firmware versions after flashing version 3.18.1 on the BGW-210.
+If the BGW210 has firmware version 4.28.6 or later:
+  1. Install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin>
 
-1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_debug/spTurquoise210-700_2.14.2_NO_AT.bin>
-   - SHA1: `e18115da88c3be8dd06806955f32e8b730407e8b`
-   - MD5: `da46862eab89212439507b6e1792b2d1`
-3. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.1/spTrapeze_Turquoise210-700_3.18.1.bin>
-   - SHA1: `c2cafb7fb81e68238be938aed0e302e3b6522ef8`
-   - MD5: `da1bd55bf48754823e75089baead74da`
+> [!WARNING]
+> There is at least one report of the inability to change firmware versions after flashing version 3.18.1 (listed below) on the BGW-210
+
+Alternate downgrade path:
+   1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_debug/spTurquoise210-700_2.14.2_NO_AT.bin>
+      - SHA1: `e18115da88c3be8dd06806955f32e8b730407e8b`
+      - MD5: `da46862eab89212439507b6e1792b2d1`
+   3. Next, install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.1/spTrapeze_Turquoise210-700_3.18.1.bin>
+      - SHA1: `c2cafb7fb81e68238be938aed0e302e3b6522ef8`
+      - MD5: `da1bd55bf48754823e75089baead74da`
 
 ### BGW320 downgrade path
 
