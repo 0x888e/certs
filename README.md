@@ -32,6 +32,9 @@ To run the downloader, your BGW has to be on a compatible firmware. Version 3.18
 
 Apply the following firmware images. **It is important that these firmware images are installed in the order they are displayed below**
 
+> [!WARNING]
+> There is at least one report of the inability to change firmware versions after flashing version 3.18.1 on the BGW-210.
+
 1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_debug/spTurquoise210-700_2.14.2_NO_AT.bin>
    - SHA1: `e18115da88c3be8dd06806955f32e8b730407e8b`
    - MD5: `da46862eab89212439507b6e1792b2d1`
