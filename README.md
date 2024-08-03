@@ -50,6 +50,9 @@ Alternate downgrade path (only use if the previous firmware could not be applied
 
 Depending on your device manufacturer, there are two separate download paths. You can determine your manufacturer by looking at the sticker on the back of the BGW320. **It is important that these firmware images are installed in the order they are displayed below**.
 
+> [!WARNING]
+> In at least two cases, these firmware versions are reported to have a finite (60-90 second) window before the BGW320 reboots. You will have to quickly flash the firmware version immediately when the webui first comes online. To aid in this process, it is advisable to ping the device in another window (`ping 192.168.1.254`). Ping will show the device online briefly, then offline, then online again. It is the second online window when you need to upload the firmware, so have the access code readily available when you browse to <http://192.168.1.254/cgi-bin/update.ha>.
+
 - BGW320-500 (Humax)
   1. First install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/320/0C08B4/BGW320-500_3.17.5_dnvpnP/spTurquoise320-500_3.17.5_dnvpnP_021_sec.bin>
      - SHA1: `259e91b586f89f1e94eaa554a52fd9a2ea1cd026`
