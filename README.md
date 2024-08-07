@@ -32,6 +32,9 @@ To run the downloader, your BGW has to be on a compatible firmware. Version 3.18
 
 Apply the following firmware images. **It is important that these firmware images are installed in the order they are displayed below**
 
+> [!NOTE]
+> **Your BGW210/BGW320 should not have internet access at this point.** Using a live provisioned device is not recommended. If you must, pull out the SFP adapter (BGW320) or, if you're using an external ONT, the ethernet cable from the RED ONT port (typical for the BGW210) after downloading these images, then flash with the device disconnected from the internet.
+
 If the BGW210 has firmware version 4.28.6 or later:
   1. Install: <http://gateway.c01.sbcglobal.net/firmware/ALPHA/210/001E46/BGW210-700_3.18.2/spTurquoise210-700_3.18.2_ENG.bin>
 
