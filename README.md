@@ -1,10 +1,12 @@
 # Extract certificate data files from BGW210 and BGW320 routers
 
-This repository exists to retrieve and convert calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls).
+This repository exists to retrieve calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls).
 
 > [!CAUTION]
 > This method requires downgrading firmware to earlier versions. That may result in configuration incompatibilities, which can result in the loss of various settings on the BGW.
 > Though it _should_ remain be usable for internet access, this has not been tested. It is not recommended to use this approach on a BGW provisioned for service. **Use at your own risk**.
+
+**As of August 8, 2024, the official mirror of the firmware images listed below does not appear to host the images any longer. These images can still be obtained by separate mirrors from community-provided links, but are unofficial. If you use such a link, validate the images using the SHA1/MD5 hashes listed below (which were calculated from the official mirror images).**
 
 ## How is this different from mozzarellathicc/attcerts?
 
