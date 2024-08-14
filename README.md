@@ -53,7 +53,7 @@ Alternate downgrade path (only use if the previous firmware could not be applied
 
 ### BGW320 downgrade path
 
-Depending on your device manufacturer, there are two separate download paths. You can determine your manufacturer by looking at the sticker on the back of the BGW320. **It is important that these firmware images are installed in the order they are displayed below**.
+Depending on your device manufacturer, there are two separate downgrade paths. You can determine your manufacturer by looking at the sticker on the back of the BGW320. **It is important that these firmware images are installed in the order they are displayed below**.
 
 > [!WARNING]
 > In at least two cases, these firmware versions are reported to have a finite (60-90 second) window before the BGW320 reboots. You will have to quickly flash the firmware version immediately when the webui first comes online. To aid in this process, it is advisable to ping the device in another window (`ping 192.168.1.254`). Ping will show the device online briefly, then offline, then online again. It is the second online window when you need to upload the firmware, so have the access code readily available when you browse to <http://192.168.1.254/cgi-bin/update.ha>.
