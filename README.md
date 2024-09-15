@@ -96,6 +96,7 @@ With your machine connected to LAN1 on the BGW and the BGW powered ON, perform t
 3. Follow the instructions in the terminal from the script.
 
 For the BGW320, four files will be produced: calibraiton_01.bin, and roughly three root CA der files.
+
 For the BGW210, four files will be produced: mfg.dat, and roughly three (or more, varies based on the device) root CA der files.
 
 ## STEP 4: Conversion to wpa_supplicant-compatible configuration files
