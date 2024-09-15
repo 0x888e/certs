@@ -186,13 +186,6 @@ def download(args: argparse.Namespace) -> None:
 
         print(f"[+] Download successful. File written to {fname}")
 
-        # if it's a 210, the calibration data is at the last 16384 bytes of the mfg.dat file
-        if model == Model.BGW210:
-            # write the calibration data to a file
-            with open(args.out_dir / "calibration_01.bin", "wb") as f:
-                f.write(result[-16384:])
-            print(f"[+] {model.value} Calibration data written to calibration_01.bin")
-
         # also grab the root certificates
         try:
             # get rcertattr.txt, which contains a listing of the root certs used for EAP
