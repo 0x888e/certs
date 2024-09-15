@@ -1,6 +1,6 @@
 # Extract certificate data files from BGW210 and BGW320 routers
 
-This repository exists to retrieve calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls).
+Retrieves 802.1x certificate calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls).
 
 > [!CAUTION]
 > This method requires downgrading firmware to earlier versions. That may result in configuration incompatibilities, which can result in the loss of various settings on the BGW.
@@ -95,10 +95,8 @@ With your machine connected to LAN1 on the BGW and the BGW powered ON, perform t
 2. Let the script determine your BGW compatibility.
 3. Follow the instructions in the terminal from the script.
 
-For the BGW320, four files will be produced: calibraiton_01.bin, and three root CA der files.
-For the BGW210, five files will be produced: mfg.dat, calibration_01.bin, and three root CA der files.
-
-The BGW210 calibration_01.bin file is not needed and only produced for convenience. It represents the last 16kb chunk of the mfg.dat file containing the raw certificate data.
+For the BGW320, four files will be produced: calibraiton_01.bin, and roughly three root CA der files.
+For the BGW210, four files will be produced: mfg.dat, and roughly three (or more, varies based on the device) root CA der files.
 
 ## STEP 4: Conversion to wpa_supplicant-compatible configuration files
 
