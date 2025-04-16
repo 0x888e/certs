@@ -1,12 +1,14 @@
 # Extract certificate data files from BGW210 and BGW320 routers
 
-Retrieves 802.1x certificate calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls).
+Retrieves 802.1x certificate calibration data from BGW routers. This data must be converted into `wpa_supplicant` compatible configuration files / certificates using [mfgdat](https://github.com/abrender/mfgdat) (or, alternativelly using the legacy (closed source) [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) from devicelocksmith (aka dls)).
 
 > [!CAUTION]
 > This method requires downgrading firmware to earlier versions. That may result in configuration incompatibilities, which can result in the loss of various settings on the BGW.
 > Though it _should_ remain be usable for internet access, this has not been tested. It is not recommended to use this approach on a BGW provisioned for service. **Use at your own risk**.
 
 **As of August 8, 2024, the official mirror of the firmware images listed below does not appear to host the images any longer. These images can still be obtained by separate mirrors from community-provided links, but are unofficial. If you use such a link, validate the images using the SHA1/MD5 hashes listed below (which were calculated from the official mirror images).**
+
+**As of April 16, 2025, this method is still functional. Firmware images must be obtained through community channels. The original links in this doc will be kept even though they're inactive/inaccessible.**
 
 ## How is this different from mozzarellathicc/attcerts?
 
@@ -101,7 +103,7 @@ For the BGW210, four files will be produced: mfg.dat, and roughly three (or more
 
 ## STEP 4: Conversion to wpa_supplicant-compatible configuration files
 
-Use the appropriate version of [mfg_dat_decode](https://www.devicelocksmith.com/2018/12/eap-tls-credentials-decoder-for-nvg-and.html) with the resulting mfg.dat/calibration_01.bin and root certs produced by this script.
+Use [mfgdat](https://github.com/abrender/mfgdat) (or alternatively, mfg_dat_decode) with the resulting mfg.dat/calibration_01.bin and root certs produced by this script.
 
 ## STEP 5: Cleanup
 
@@ -110,3 +112,6 @@ You can upgrade your BGW to the latest firmware version when it is complete. The
 - BGW210-700: <http://gateway.c01.sbcglobal.net/firmware/GA/210/001E46/BGW210-700_4.28.6/spTurquoise210-700_4.28.6.bin>
 - BGW320-500 (Humax): <http://gateway.c01.sbcglobal.net/firmware/GA/320/0C08B4/BGW320-500_4.27.7/spTurquoise320-500_4.27.7_sec.bin>
 - BGW320-505 (Nokia): <http://gateway.c01.sbcglobal.net/firmware/GA/320/207852/BGW320-505_4.27.7/spTurquoise320-505_4.27.7_sec.bin>
+
+> [!NOTE]
+> As of April 16, 2025, BGW images are now in the 6.x range. There are no known direct download links for these fw versions. The only way to update is to connect the device  to the internet so it can receive updates via it's normal update channel.
