@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import ctypes
+import os
+import re
 import socket
 import time
 from enum import Enum
@@ -112,6 +114,34 @@ def exploitable() -> bool:
     raise Exception("Could not determine exploitability status. Is the BGW online?")
 
 
+def is_safe_der_basename(filename: str) -> bool:
+    """Accept only bounded ASCII root-certificate filenames, never paths."""
+    return (
+        len(filename) <= 128
+        and ".." not in filename
+        and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,123}\.der", filename) is not None
+    )
+
+
+def write_private_file(path: Path, data: bytes) -> None:
+    """Create a new credential file privately, without replacing an existing path."""
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_BINARY", 0)
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    descriptor = os.open(path, flags, 0o600)
+    try:
+        with os.fdopen(descriptor, "wb") as output:
+            descriptor = -1
+            if hasattr(os, "fchmod"):
+                os.fchmod(output.fileno(), 0o600)
+            output.write(data)
+    except Exception:
+        if descriptor >= 0:
+            os.close(descriptor)
+        path.unlink(missing_ok=True)
+        raise
+
+
 def download(args: argparse.Namespace) -> None:
     print(
         """\
@@ -181,8 +211,7 @@ def download(args: argparse.Namespace) -> None:
 
         # write the retrieved calibration file to a file on disk based on the file part of the path parameter
         fname = Path(path).name
-        with open(args.out_dir / fname, "wb") as f:
-            f.write(result)
+        write_private_file(args.out_dir / fname, result)
 
         print(f"[+] Download successful. File written to {fname}")
 
@@ -201,11 +230,13 @@ def download(args: argparse.Namespace) -> None:
             # 2:1:0:attroot2031.der
             # 3:1:0:attsubca2021.der
             for line in rcertattr.decode().splitlines():
-                # file also contains comments
-                if line.startswith("#"):
+                # file also contains comments and may have blank lines
+                if not line.strip() or line.startswith("#"):
                     continue
 
                 root_cert_filename = line.split(":")[-1]
+                if not is_safe_der_basename(root_cert_filename):
+                    raise ValueError("Invalid root certificate basename in rcertattr.txt")
                 rootcert_data = get_response_body(
                     args.host, args.port, f"/var/etc/rootcert/{root_cert_filename}"
                 )
@@ -216,8 +247,7 @@ def download(args: argparse.Namespace) -> None:
                     continue
 
                 # write the certificate out to out_dir/root_cert_filename
-                with open(args.out_dir / root_cert_filename, "wb") as f:
-                    f.write(rootcert_data)
+                write_private_file(args.out_dir / root_cert_filename, rootcert_data)
         except Exception as e:
             print(f"[-] Failed to retrieve root cert: {e}")
             exit(1)

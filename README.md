@@ -91,11 +91,14 @@ With your machine connected to LAN1 on the BGW and the BGW powered ON, perform t
 1. Run the download.py script with **Python 3.12 or later**:
 
    ```bash
-   python download.py
+   mkdir -m 700 bgw-certificates
+   python download.py --out-dir bgw-certificates
    ```
 
 2. Let the script determine your BGW compatibility.
 3. Follow the instructions in the terminal from the script.
+
+Downloaded files contain device credentials. On POSIX systems, they are created with owner-only (`0600`) permissions. Store them in a private directory (for example, create one with `mkdir -m 700` as above). The output directory must already exist. Existing files and symbolic links are rejected instead of overwritten, so choose a new directory for another attempt. On Windows, also restrict access to the output directory using its security settings.
 
 For the BGW320, four files will be produced: calibraiton_01.bin, and roughly three root CA der files.
 
